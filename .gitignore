@@ -178,3 +178,5 @@ Temporary Items
 .gradle
 .idea
 .env
+
+src/main/resources/application.yml

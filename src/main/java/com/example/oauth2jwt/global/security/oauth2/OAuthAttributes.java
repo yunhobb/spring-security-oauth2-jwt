@@ -7,11 +7,9 @@ import com.example.oauth2jwt.global.security.oauth2.userinfo.OAuth2UserInfo;
 import com.example.oauth2jwt.user.entity.Role;
 import com.example.oauth2jwt.user.entity.SocialType;
 import com.example.oauth2jwt.user.entity.User;
+import java.util.Map;
 import lombok.Builder;
 import lombok.Getter;
-
-import java.util.Map;
-import java.util.UUID;
 
 /**
  * 각 소셜에서 받아오는 데이터가 다르므로
@@ -68,7 +66,7 @@ public class OAuthAttributes {
     return User.builder()
         .socialType(socialType)
         .socialId(oauth2UserInfo.getId())
-        .email(UUID.randomUUID() + "@socialUser.com")
+        .email(oauth2UserInfo.getEmail())
         .role(Role.GUEST)
         .build();
   }

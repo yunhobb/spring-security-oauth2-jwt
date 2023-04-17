@@ -14,7 +14,6 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.springframework.security.crypto.password.PasswordEncoder;
 
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
@@ -30,7 +29,6 @@ public class User {
   private Long id;
 
   private String email; // 이메일
-  private String nickname; // 닉네임
 
 
   @Enumerated(EnumType.STRING)
@@ -43,10 +41,6 @@ public class User {
 
   private String refreshToken; // 리프레시 토큰
 
-  // 유저 권한 설정 메소드
-  public void authorizeUser() {
-    this.role = Role.USER;
-  }
 
   public void updateRefreshToken(String updateRefreshToken) {
     this.refreshToken = updateRefreshToken;

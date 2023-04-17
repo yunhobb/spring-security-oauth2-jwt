@@ -18,17 +18,16 @@ spring:
       client:
         registration:
           google:
-            client-id: 구글 클라이언트 ID
-            client-secret: 구글 클라이언트 Secret
-            scope: profile, email
+            client-id: 963473435536-aatrc4e6iulcd55ro429jn15ntifio3n.apps.googleusercontent.com
+            client-secret: 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
+            scope: email
 
           kakao:
-            client-id: 카카오 클라이언트 ID
-            client-secret: 카카오 클라이언트 Secret
+            client-id: 75be136585c3bb1b06fc39daf3b3ff22
+            client-secret: jfPJK4LOXiBABysfYwbTAzJYQYYX3sux
             redirect-uri: http://localhost:8080/login/oauth2/code/kakao (설정한 redirect URI)
             client-authentication-method: POST
             authorization-grant-type: authorization_code
-            scope: profile_nickname, profile_image
             client-name: Kakao
 
         provider:
